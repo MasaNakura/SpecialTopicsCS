@@ -25,4 +25,5 @@ f(x) = 3n + 2
 ## More Advanced Practice
 
 Binary Search: g(x) = binary search is log b/c it cuts the data set in half each iteration
+
 Bubble Sort: g(x) = n^2. worst case is that you have to iterative through the array n times, on which in each iteration you scan n elements.
