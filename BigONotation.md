@@ -22,11 +22,11 @@ O(g(x)) = O(n log n)
 
 f(x) = 1
 
-f(x) = 4n^2 + 2
+f(x) = n^2
 
-f(x) = 4n^2 + n + 2
+f(x) = n^2
 
-f(x) = 2n + 2
+f(x) = n
 
 ## More Advanced Practice
 
