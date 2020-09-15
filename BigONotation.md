@@ -24,9 +24,9 @@ f(x) = 1
 
 f(x) = 3n^2 + 2
 
-f(x) = 2n + 1
+f(x) = 4n^2 + n + 2
 
-f(x) = 3n + 2
+f(x) = 2n + 2
 
 ## More Advanced Practice
 
