@@ -1,19 +1,21 @@
 ## Estimating g(x) given f(x)
 
-(1)f(x) = n + log2n           
+(1)f(x) = n + log2n               
 O(g(x)) = O(n)
 
-(2)f(x) = n^2 + log n^4       
+(2)f(x) = n^2 + log n^4              
 O(g(x)) = O(n^2)
 
-(3)f(x) = n^2 \* n^3 \n O(g(x)) = O(n^5)
+(3)f(x) = n^2 \* n^3             
+O(g(x)) = O(n^5)
 
-(4)f(x) = n^5/n^2 \n O(g(x)) = O(n^3)
+(4)f(x) = n^5/n^2          
+O(g(x)) = O(n^3)
 
-(5)f(x) = n*(log n)\* n 
+(5)f(x) = n*(log n)\* n            
 O(g(x)) = O(n^2 \* log n)
 
-(6)f(x) = n + n log n + log n 
+(6)f(x) = n + n log n + log n             
 O(g(x)) = O(n log n)
 
 ## Counting Operations to produce polynomials
