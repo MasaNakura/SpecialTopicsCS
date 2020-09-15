@@ -1,4 +1,5 @@
-private int binarySearch(int num, int[] arr) {         
+private int binarySearch(int num, int[] arr) {    
+
 
    length = arr.length;     
    
