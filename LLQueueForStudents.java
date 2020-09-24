@@ -1,10 +1,10 @@
 /*
  * This class implements a queue with linked list
- * Author: Meng Yang
- * Date: Fall 2018
+ * Group 5: Aaron Xie, Athena Kim, Masa Nakura
+ * Period 7
  */
 
-public class LLQueue {
+public class LLQueueForStudents {
     // This is an inner class specifically utilized for LLStack class,
     // thus no setter or getters are needed
     private class Node {
@@ -29,7 +29,7 @@ public class LLQueue {
     private Node back;
 
     public LLQueueForStudents() {
-     / to do/
+        // to do
         this.front = null;
         this.back = null;
     }
@@ -37,32 +37,34 @@ public class LLQueue {
     //offer(enqueue) adds the object at the back of the queue
     public void offer(Object o) {
      // to do
-        Node node = new Node(o);
-
-        if (front == null) {
-            front = node;
-            back = node;
+        Node node = new Node(o, null);
+        if (this.isEmpty()) {
+             this.front = node;
         } else {
-            back.next = node;
-            back = node;
+            Node temp = front;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = back;
+            this.back = node;
         }
-
     }
     
     //poll(dequeue): retrieves and removes the head of this queue, 
     //or returns null if this queue is empty.
     public Object poll() {
-     // to do
+        // to do
 
-     if (front == null) {
-         return null;
-     }
-
-     front = front.next;
-
-     if (front == null) {
-         back = null;
-     }
+        if (this.isEmpty()) {
+            return null;
+        }
+        Node retrieved = this.front;
+        this.front = this.front.next;
+        if (front == null) {
+            front = back;
+            back = null;
+        }
+        return retrieved.data;
     }
     
     // Returns the size of linked list by traversing the list
@@ -73,13 +75,13 @@ public class LLQueue {
             count++;
             temp = temp.next;
         }
-        return count;
+        return count + 1;
     }
     //peek: Retrieves, but does not remove, the head of this queue, 
     //or returns null if this queue is empty.
     public Object peek() {
         // to do
-        if (front != null) {
+        if (!this.isEmpty()) {
             return front.data;
         } else {
             return null;
@@ -89,11 +91,7 @@ public class LLQueue {
     //
     public boolean isEmpty() {
         // to do
-        if (front == null) {
-            return true;
-        } else {
-            return false;
-        }
+        return front == null;
     } 
     
     // For two lists to be equal they must contain the same data items in
