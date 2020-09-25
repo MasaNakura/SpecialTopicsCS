@@ -78,6 +78,7 @@ public class LLQueueForStudents {
         }
         return count + 1;
     }
+    
     //peek: Retrieves, but does not remove, the head of this queue, 
     //or returns null if this queue is empty.
     public Object peek() {
@@ -89,7 +90,7 @@ public class LLQueueForStudents {
         }
     } 
     
-    //
+    // returns true if there is no element in this queue and returns false otherwise
     public boolean isEmpty() {
         // to do
         return front == null;
