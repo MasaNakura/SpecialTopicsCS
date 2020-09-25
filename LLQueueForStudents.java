@@ -28,6 +28,7 @@ public class LLQueueForStudents {
     private Node front;
     private Node back;
 
+    // Creates an empty Queue
     public LLQueueForStudents() {
         // to do
         this.front = null;
