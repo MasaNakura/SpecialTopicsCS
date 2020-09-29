@@ -109,8 +109,21 @@ public class UsingStacksSuitorsLab implements Runnable {
 	}
 	
 	public static int findPlaceToStand(int numSuitors) {
-		//todo
-		return -1;
+		Queue<Integer> queue = new LinkedList<>();
+        for(int i = 0; i < numSuitors; i++) {
+            queue.add(i+1);
+        }
+        int modulus = 3;
+        int i = 1;
+        while(queue.size() > 1) { 
+            int candidate = queue.poll();
+            if(i != modulus) {
+                queue.add(candidate);
+            }
+      
+            i = (i % mod) + 1; 
+        }
+        return queue.poll();
 	}	
 
 
@@ -131,6 +144,13 @@ public class UsingStacksSuitorsLab implements Runnable {
 		//current = get a thread
 		//current.start();
 		//put the thread back
+
+		for (int i = 0; i < q.size(); i++) {
+			current = q.peek();
+			q.poll();
+			current.start();
+			q.add(current);
+		}
 		
 		System.out.println("Thread order after start()ing:");
 		q.toString();  
