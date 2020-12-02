@@ -2,7 +2,7 @@
 // Group 5
 
 public class Circle extends Shape {
-   private double radius;
+   protected double radius;
    
    // constructs default circle with radius of 1.0, color of green, and is filled
    public Circle() {
